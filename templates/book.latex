@@ -133,6 +133,9 @@ $endif$
 % Section numbering
 \setcounter{secnumdepth}{1}
 
+% Fix pandoc longtable caption suppression
+\newcounter{none}
+
 \begin{document}
 
 % Half title page
