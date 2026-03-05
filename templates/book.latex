@@ -1,0 +1,177 @@
+% Professional book template for "The Democracy We Deserve"
+% Trim size: 6" x 9" (standard trade paperback)
+\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$,twoside,openright]{book}
+
+% Page geometry — 6x9 trade paperback with gutter
+\usepackage[
+  paperwidth=6in,
+  paperheight=9in,
+  inner=0.875in,
+  outer=0.625in,
+  top=0.75in,
+  bottom=0.875in,
+  footskip=0.4in
+]{geometry}
+
+% Typography
+\usepackage{fontspec}
+\setmainfont{Georgia}[
+  BoldFont={Georgia Bold},
+  ItalicFont={Georgia Italic},
+  BoldItalicFont={Georgia Bold Italic}
+]
+\setsansfont{Helvetica Neue}[
+  BoldFont={Helvetica Neue Bold}
+]
+
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.25}
+\usepackage{parskip}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\textit{The Democracy We Deserve}}
+\fancyhead[RO]{\small\textit{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Chapter title styling
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\sffamily}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\sffamily}{}{0pt}{}
+
+% Callout and deep-dive boxes
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins}
+
+\newtcolorbox{calloutbox}{
+  enhanced,
+  breakable,
+  colback=black!3,
+  colframe=black!20,
+  boxrule=0pt,
+  borderline west={3pt}{0pt}{black!40},
+  left=12pt, right=12pt, top=10pt, bottom=10pt,
+  arc=0pt,
+  before skip=1.2em,
+  after skip=1.2em
+}
+
+\newtcolorbox{deepdivebox}{
+  enhanced,
+  breakable,
+  colback=black!2,
+  colframe=black!15,
+  boxrule=0.5pt,
+  left=12pt, right=12pt, top=10pt, bottom=10pt,
+  arc=2pt,
+  before skip=1.2em,
+  after skip=1.2em,
+  fonttitle=\bfseries\sffamily\small,
+  coltitle=black!70,
+  separator sign none
+}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+
+% Tables
+\usepackage{longtable,booktabs,array}
+
+% Graphics
+\usepackage{graphicx}
+
+% Block quotes
+\usepackage{csquotes}
+\renewenvironment{quote}
+  {\list{}{\leftmargin=1.5em\rightmargin=0.5em}\item\relax\itshape}
+  {\endlist}
+
+% Footnotes — bottom of page, smaller
+\usepackage[bottom,hang]{footmisc}
+\setlength{\footnotemargin}{0.6em}
+\renewcommand{\footnotelsize}{\small}
+
+% No widows/orphans
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Part styling
+\titleformat{\part}[display]
+  {\centering\normalfont\Huge\bfseries\sffamily}
+  {\partname\ \thepart}{20pt}{\Huge}
+
+% Title page
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+\date{$if(date)$$date$$endif$}
+
+% Pandoc tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% Half title page
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+{\Large\sffamily\bfseries $title$}
+\end{center}
+\vspace*{\fill}
+\newpage
+
+% Blank page
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+% Full title page
+\thispagestyle{empty}
+\vspace*{2in}
+\begin{center}
+{\Huge\sffamily\bfseries $title$}\\[0.5em]
+$if(subtitle)$
+{\Large\sffamily\itshape $subtitle$}\\[2em]
+$endif$
+{\large $for(author)$$author$$sep$ \\ $endfor$}
+\end{center}
+\vspace*{\fill}
+\newpage
+
+% Copyright page
+\thispagestyle{empty}
+{\small
+$if(rights)$$rights$$endif$
+
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means without the prior written permission of the author.
+
+$if(date)$First edition, $date$$endif$
+
+\vspace*{\fill}
+}
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+$body$
+
+\end{document}

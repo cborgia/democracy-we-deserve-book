@@ -15,33 +15,49 @@ CHAPTERS = chapters/00-introduction.md \
            chapters/14-appendix.md
 
 METADATA = metadata.yaml
-FILTER = filters/boxes.lua
-OUTPUT_PDF = the-democracy-we-deserve.pdf
-OUTPUT_EPUB = the-democracy-we-deserve.epub
-OUTPUT_HTML = build/index.html
+FILTER   = filters/boxes.lua
+TEMPLATE = templates/book.latex
 
-.PHONY: pdf epub html clean all
+.PHONY: all pdf epub kindle html clean
 
-all: pdf epub
+all: pdf epub html
 
-pdf: $(CHAPTERS) $(METADATA) $(FILTER)
+# Print-ready PDF (6x9 trade paperback)
+pdf: $(CHAPTERS) $(METADATA) $(FILTER) $(TEMPLATE)
 	pandoc $(METADATA) $(CHAPTERS) \
 		--lua-filter=$(FILTER) \
+		--template=$(TEMPLATE) \
 		--pdf-engine=xelatex \
-		-o $(OUTPUT_PDF)
+		--top-level-division=chapter \
+		-o the-democracy-we-deserve.pdf
 
+# ePub (Apple Books, Kobo, general readers)
 epub: $(CHAPTERS) $(METADATA)
 	pandoc $(METADATA) $(CHAPTERS) \
 		--toc --toc-depth=2 \
-		-o $(OUTPUT_EPUB)
+		--css=assets/epub.css \
+		--epub-chapter-level=1 \
+		--top-level-division=chapter \
+		-o the-democracy-we-deserve.epub
 
+# Kindle-optimized ePub (upload to KDP, they convert)
+kindle: $(CHAPTERS) $(METADATA)
+	pandoc $(METADATA) $(CHAPTERS) \
+		--toc --toc-depth=2 \
+		--css=assets/epub.css \
+		--epub-chapter-level=1 \
+		--top-level-division=chapter \
+		-o the-democracy-we-deserve-kindle.epub
+
+# HTML preview
 html: $(CHAPTERS) $(METADATA)
 	mkdir -p build
 	pandoc $(METADATA) $(CHAPTERS) \
 		--standalone --toc --toc-depth=2 \
 		--css=assets/style.css \
-		-o $(OUTPUT_HTML)
+		--top-level-division=chapter \
+		-o build/index.html
 
 clean:
-	rm -f $(OUTPUT_PDF) $(OUTPUT_EPUB)
+	rm -f *.pdf *.epub
 	rm -rf build/

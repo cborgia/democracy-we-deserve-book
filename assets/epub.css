@@ -1,0 +1,156 @@
+/* ePub / Kindle stylesheet — The Democracy We Deserve */
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 1em;
+}
+
+/* Chapter titles */
+h1 {
+  font-family: sans-serif;
+  font-size: 1.6em;
+  margin-top: 3em;
+  margin-bottom: 0.8em;
+  page-break-before: always;
+  text-align: left;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: 1em;
+  margin-top: 1.2em;
+}
+
+/* Paragraphs — traditional book indent, no spacing */
+p {
+  text-indent: 1.5em;
+  margin: 0;
+  text-align: justify;
+}
+
+/* First paragraph after heading — no indent */
+h1 + p, h2 + p, h3 + p,
+blockquote + p,
+div.callout + p,
+div.deep-dive + p {
+  text-indent: 0;
+}
+
+/* Block quotes */
+blockquote {
+  margin: 1.2em 1em 1.2em 1.5em;
+  padding-left: 0.8em;
+  border-left: 2px solid #999;
+  font-style: italic;
+  color: #444;
+}
+
+blockquote p {
+  text-indent: 0;
+}
+
+/* Callout box */
+div.callout {
+  background-color: #f8f8f2;
+  border-left: 3px solid #888;
+  padding: 0.8em 1em;
+  margin: 1.5em 0;
+}
+
+div.callout p {
+  text-indent: 0;
+  text-align: left;
+}
+
+/* Deep dive box */
+div.deep-dive {
+  background-color: #f2f5f8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.8em 1em;
+  margin: 1.5em 0;
+}
+
+div.deep-dive p {
+  text-indent: 0;
+  text-align: left;
+}
+
+div.deep-dive h3 {
+  margin-top: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+/* Footnotes */
+.footnotes {
+  font-size: 0.85em;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 0.8em;
+}
+
+.footnotes p {
+  text-indent: 0;
+}
+
+a.footnote-ref {
+  vertical-align: super;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+
+/* Section break */
+hr {
+  border: none;
+  text-align: center;
+  margin: 2em 0;
+}
+
+hr::after {
+  content: "• • •";
+  color: #999;
+  letter-spacing: 0.5em;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.8em 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+li p {
+  text-indent: 0;
+}
