@@ -102,7 +102,7 @@
 % Footnotes — bottom of page, smaller
 \usepackage[bottom,hang]{footmisc}
 \setlength{\footnotemargin}{0.6em}
-\renewcommand{\footnotelsize}{\small}
+\renewcommand{\footnotesize}{\small}
 
 % No widows/orphans
 \widowpenalty=10000
