@@ -80,8 +80,7 @@
   before skip=1.2em,
   after skip=1.2em,
   fonttitle=\bfseries\sffamily\small,
-  coltitle=black!70,
-  separator sign none
+  coltitle=black!70
 }
 
 % Links
