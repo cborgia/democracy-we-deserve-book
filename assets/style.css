@@ -1,0 +1,143 @@
+@page {
+  size: 6in 9in;
+  margin: 1in;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 12pt;
+  line-height: 1.6;
+  color: #1a1a1a;
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  color: #2a2a2a;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 1.2em;
+  color: #444;
+}
+
+blockquote {
+  border-left: 3px solid #888;
+  margin-left: 0;
+  padding-left: 1.2em;
+  color: #555;
+  font-style: italic;
+}
+
+/* Callout box */
+div.callout {
+  background: #f7f7f0;
+  border: 1px solid #d4c87a;
+  border-left: 4px solid #b8a832;
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+}
+
+div.callout p:first-child {
+  margin-top: 0;
+}
+
+div.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Deep dive box */
+div.deep-dive {
+  background: #f0f4f8;
+  border: 1px solid #a0b4c8;
+  border-left: 4px solid #4a7aa8;
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+}
+
+div.deep-dive h3 {
+  margin-top: 0;
+  color: #2a5a7a;
+  font-size: 1em;
+}
+
+div.deep-dive p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footnotes */
+.footnotes {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 3em;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
+
+a.footnote-ref {
+  font-size: 0.8em;
+  vertical-align: super;
+  text-decoration: none;
+  color: #4a7aa8;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Table of contents */
+nav#TOC {
+  margin-bottom: 3em;
+}
+
+nav#TOC ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+nav#TOC > ul {
+  padding-left: 0;
+}
+
+nav#TOC a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav#TOC a:hover {
+  color: #4a7aa8;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}

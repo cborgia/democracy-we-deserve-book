@@ -1,1 +1,4 @@
-book
+*.pdf
+*.epub
+build/
+.DS_Store
