@@ -12,7 +12,13 @@ So why the truck?
 
 A pickup truck means that *if* you want to bring home a new grill from Lowe's, you can. *If* your buddy needs help moving a couch, you're the one who gets the call. *If* you decide on a Saturday morning to build a deck, you can load up the lumber yourself. You might only use that bed a dozen times a year — but every single day, you know it's there. The capability exists. The option is open. The possibility is real.
 
-Americans don't buy trucks for what they do every day. They buy trucks for what they *could* do on any given day. And that distinction — between the routine and the possible — is one of the most powerful forces in American culture.
+Americans don't buy trucks for what they do every day. They buy trucks for what they *could* do on any given day.
+
+And it's not just trucks. Think about the spare bedroom in your house — the one that's a home office most of the time, but *could* be a guest room, a nursery, a studio. You're not paying for what you need today. You're paying for what you might need tomorrow. Think about the generator in the garage. The power's almost never out — but when it is, you're ready. Think about the millions of Americans with concealed carry permits who never draw their weapon. The point was never daily use. The point is capability. Think about the college degree that didn't lead to a job in that field — but opened doors that wouldn't have existed otherwise.
+
+Americans invest in possibility everywhere. The truck, the spare room, the generator, the permit, the degree — they're all the same instinct: expand what's available to you, even if you don't use it every day.
+
+And that distinction — between the routine and the possible — is one of the most powerful forces in American culture.
 
 We are a nation built on possibility.
 
