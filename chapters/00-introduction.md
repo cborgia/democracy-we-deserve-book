@@ -2,11 +2,11 @@
 
 The number one selling vehicle in America is a pickup truck.
 
-Not a sedan. Not an SUV. Not a practical little hatchback that gets 40 miles to the gallon. A full-size, bed-in-the-back, tow-anything pickup truck.
+Not a sedan. Not an SUV. Not a compact crossover. A full-size, bed-in-the-back, tow-anything pickup truck.
 
-And here's the thing — most people who buy one don't haul anything on a daily basis. They commute to work. They pick up groceries. They drive their kids to school. By any rational, utilitarian measure, a pickup truck is overkill for 90% of what most owners actually do with it.
+It's practical — it does everything a daily driver does. But it does something more. Most people who buy one don't haul anything every day. They commute to work. They pick up groceries. They drive their kids to school.
 
-So why do they buy it?
+So why the truck?
 
 **Possibilities.**
 
